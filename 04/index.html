@@ -1,76 +1,127 @@
-<form
-  action="https://script.google.com/macros/s/AKfycbzyGcZiX4JttzCJEafiyEd8XHR9TUNv_JeSRV2iyLYFT_ZwAOg8f2IDMKxP8wOj4BGPbg/exec"
-  method="post"
->
-  <ul>
-    <li>
-      <label for="name">ハンドルネーム</label>
-      <input type="text" id="name" name="user_name" placeholder="ここに名前を入力"/>
-    </li>
-    <li>
-      <label for="progress">ここまでの身に付き具合を数字で</label>
-      <input type="number" id="progress" name="user_progress" placeholder="1~5の数字を入力" min="1" max="5"/>
-    </li>
-    <li>
-      <label for="kannsou">感想</label>
-      <textarea id="kannsou" name="user_kannsou" placeholder="ここに感想を入力" rows="4"></textarea>
-    </li>
-    <section>
-      <fieldset>
-        <legend>アンケート</legend>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>04</title>
+  </head>
+  <body>
+    <form
+      action="https://script.google.com/macros/s/AKfycbzyGcZiX4JttzCJEafiyEd8XHR9TUNv_JeSRV2iyLYFT_ZwAOg8f2IDMKxP8wOj4BGPbg/exec"
+      method="post"
+    >
+      <h1>ここまでの講義の感想</h1>
+
+      <section>
         <fieldset>
-          <legend>今までの課題の全体的な難易度</legend>
-          <p>
-            <input type="radio" name="difficulty" id="difficulty_easy" value="1" />
-            <label for="difficulty_easy">簡単だった</label>
-          </p>
-          <p>
-            <input type="radio" name="difficulty" id="difficulty_normal" value="2"/>
-            <label for="difficulty_easy">普通だった</label>
-          </p>
-          <p>
-            <input type="radio" name="difficulty" id="difficulty_hard" value="3" />
-            <label for="difficulty_easy">難しかった</label>
-          </p>
+          <legend>感想</legend>
+          <ul>
+            <li>
+              <label for="name">ハンドルネーム</label>
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                placeholder="ここに名前を入力"
+              />
+            </li>
+            <li>
+              <label for="progress">ここまでの身に付き具合を数字で</label>
+              <input
+                type="number"
+                id="progress"
+                name="user_progress"
+                placeholder="1~5の数字を入力"
+                min="1"
+                max="5"
+              />
+            </li>
+            <li>
+              <label for="kannsou">感想</label>
+              <textarea
+                id="kannsou"
+                name="user_kannsou"
+                placeholder="ここに感想を入力"
+                rows="4"
+              ></textarea>
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+      <section>
+        <fieldset>
+          <legend>アンケート</legend>
+          <fieldset>
+            <legend>今までの課題の全体的な難易度</legend>
+            <p>
+              <input
+                type="radio"
+                name="difficulty"
+                id="difficulty_easy"
+                value="1"
+              />
+              <label for="difficulty_easy">簡単だった</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="difficulty"
+                id="difficulty_normal"
+                value="2"
+              />
+              <label for="difficulty_easy">普通だった</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="difficulty"
+                id="difficulty_hard"
+                value="3"
+              />
+              <label for="difficulty_easy">難しかった</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>今までの課題で提出が遅れた理由</legend>
+            <p>
+              <input type="checkbox" name="reason" id="reason_1" value="1" />
+              <label for="reason_1">提出が遅れたことはない</label>
+            </p>
+            <p>
+              <input type="checkbox" name="reason" id="reason_2" value="2" />
+              <label for="reason_2">ほかのことで忙しかった</label>
+            </p>
+            <p>
+              <input type="checkbox" name="reason" id="reason_3" value="3" />
+              <label for="reason_3">怠けていた</label>
+            </p>
+            <p>
+              <input type="checkbox" name="reason" id="reason_4" value="4" />
+              <label for="reason_4">課題のことを忘れていた</label>
+            </p>
+            <p>
+              <input type="checkbox" name="reason" id="reason_5" value="5" />
+              <label for="reason_5">その他</label>
+            </p>
+          </fieldset>
         </fieldset>
 
         <fieldset>
-          <legend>今までの課題で提出が遅れた理由</legend>
+          <legend>
+            不明点があるときはDiscord上の#講義シリーズ2022質問
+            で質問できることは知っていましたか？
+          </legend>
           <p>
-            <input type="checkbox" name="reason" id="reason_1" value="1" />
-            <label for="reason_1">提出が遅れたことはない</label>
+            <select id="discord" name="discord">
+              <option value="1">はい</option>
+              <option value="2">いいえ</option>
+            </select>
           </p>
-          <p>
-            <input type="checkbox" name="reason" id="reason_2" value="2" />
-            <label for="reason_2">ほかのことで忙しかった</label>
-          </p>
-          <p>
-            <input type="checkbox" name="reason" id="reason_3" value="3" />
-            <label for="reason_3">怠けていた</label>
-          </p>
-          <p>
-            <input type="checkbox" name="reason" id="reason_4" value="4" />
-            <label for="reason_4">課題のことを忘れていた</label>
-          </p>
-          <p>
-            <input type="checkbox" name="reason" id="reason_5" value="5" />
-            <label for="reason_5">その他</label>
-          </p>      
-
         </fieldset>
-      </fieldset>
-
-      <fieldset>
-        <legend>不明点があるときはDiscord上の#講義シリーズ2022質問 で質問できることは知っていましたか？</legend>
-        <p>
-          <select id="discord" name="discord">
-            <option value="1">はい</option>
-            <option value="2">いいえ</option>
-          </select>
-      </fieldset>
-    </section>     
-    <li class="button">
-      <button type="submit">メッセージを送信</button>
-    </li>
-  </ul>
-</form>
+      </section>
+      <section>
+        <button type="reset">リセット</button>
+        <button type="submit">データを送信</button>
+      </section>
+    </form>
+  </body>
+</html>

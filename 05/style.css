@@ -1,0 +1,42 @@
+/*
+    xで置き換えられた部分を適切と思われる文字列に修正して提出しよう
+*/
+
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    background-color: black;
+    color: yellow;
+}
+
+h3{
+    font-size: 115%;
+}
+
+#about + p{
+    font-size: 150%;
+}
+
+.lists{
+    background-color: pink;
+    font-size: 115%;
+}
+
+#first{
+    background-color: gold;
+}
+
+#second{
+    background-color: silver;
+}
+
+#third{
+    color: white;
+    background-color: #cf2020;
+}
+
+#third::marker{
+    color: black;
+}
