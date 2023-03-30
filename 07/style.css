@@ -1,0 +1,78 @@
+header{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 10px 10px 30px;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-menu{
+    display: flex;    
+    width: 450px;
+    max-width: 70%;
+    justify-content: space-between;
+}
+
+body{
+    margin:0 0 0 0;    
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+main{    
+    flex-grow: 1;
+    background-color: #e3d6d6;
+    padding: 50px 10% 50px 10%;
+}
+
+.container-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;    
+}
+.container-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.padding{
+    padding: 3% 3% 3% 3%;
+}
+
+.title{
+    background-color: #000000;
+    flex-grow: 1;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.float{
+    float: left;
+}
+
+.floatbox{
+    width: 200px;
+    height: 200px;
+}
+
+.container-multicol{
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 4px dotted;
+}
+
+.padding-top{
+    padding-top: 70px;
+}
